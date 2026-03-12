@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -8,11 +9,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect("mongodb://127.0.0.1:27017/grocerydb")
+mongoose.connect(process.env.MONGO_URL)
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.log(err));
 
-const secretkey = "mysecretkey";
 
 const productSchema = new mongoose.Schema({
   name: String,
@@ -35,6 +35,11 @@ const Userschema = new mongoose.Schema({
 });
 const User = mongoose.model("User", Userschema);
 
+app.get("/get", async (req, res)=>{
+  const products=await Product.find();
+  res.json(products);
+});
+
 app.post("/register", async (req, res) => {
   const { name, email, password } = req.body;
   const userexists = await User.findOne({ email })
@@ -56,7 +61,7 @@ app.post("/login", async (req, res) => {
   const ismatch = await bcrypt.compare(password, user.password);
   if (!ismatch) return res.json({ message: "Incorrect password" });
 
-  const token = jwt.sign({ id: user._id }, secretkey, { expiresIn: "1d" });
+  const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: "1d" });
   res.json({
     message: "Login successfull",
     token,

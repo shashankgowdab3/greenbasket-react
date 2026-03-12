@@ -20,6 +20,9 @@ function Register() {
 
     const data = await response.json();
     setMessage(data.message);
+    if(data.message === "Registration successfull"){
+      window.location.href="/login"
+    }
   };
 
   return (
