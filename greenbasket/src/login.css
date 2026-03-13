@@ -31,3 +31,11 @@
   margin-top: 10px;
   font-size: 18px;
 }
+
+@media (max-width: 768px) {
+
+  .login-box {
+    width: 90%;
+  }
+
+}

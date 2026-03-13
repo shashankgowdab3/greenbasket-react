@@ -24,3 +24,11 @@ button {
 button:hover {
   background-color: darkgreen;
 }
+
+@media (max-width: 768px) {
+
+  .cart-item {
+    width: 90%;
+  }
+
+}
