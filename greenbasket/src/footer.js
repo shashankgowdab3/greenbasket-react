@@ -30,7 +30,7 @@ function Footer() {
             </div>
 
             <div className="footer-bottom">
-                <p><marquee>2026 GREENBASKET. All rights reserverd.</marquee></p>
+                <p>2026 GREENBASKET. All rights reserverd.</p>
             </div>
         </footer>
 
