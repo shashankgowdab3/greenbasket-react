@@ -7,6 +7,7 @@ import Cart from "./cart";
 import Register from "./register";
 import About from "./about";
 import Login from "./login";
+import Footer from "./footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
   )
 };

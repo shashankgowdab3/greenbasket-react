@@ -1,5 +1,6 @@
 import React from "react";
-import "./home.css";
+import "./style.css";
+import Footer from "./footer";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
@@ -32,8 +33,6 @@ function Home() {
                     <div className="card">Beverages</div>
                 </div>
             </div>
-
-
         </div>
     )
 };

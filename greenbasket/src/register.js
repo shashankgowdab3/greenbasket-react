@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./register.css";
+import "./style.css";
 
 
 
@@ -27,7 +27,7 @@ function Register() {
 
   return (
     <div className="register-container">
-      <h2>Register</h2>
+      <h2>REGISTER</h2>
       <form onSubmit={handleRegister} className="register-form">
         <input
           type="text"
@@ -53,7 +53,7 @@ function Register() {
           required
         />
 
-        <button type="submit">Register</button>
+        <button type="submit">REGISTER</button>
       </form>
 
       {message && <p>{message}</p>}
