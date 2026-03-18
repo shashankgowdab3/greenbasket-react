@@ -5,7 +5,7 @@ import "./style.css";
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="logo">GreenBasket</div>
+      <div className="logo">GREENBASKET</div>
 
       <ul className="nav-links">
         <li><Link to="/">HOME</Link></li>

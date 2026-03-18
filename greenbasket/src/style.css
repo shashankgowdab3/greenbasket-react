@@ -422,13 +422,15 @@ button:hover {
   padding: 0;
 }
 
-.footer-section ul li{
+.footer-section ul li a{
   margin: 6px 0;
   font-size: 14px;
+  color: white;
   cursor: pointer;
+  text-decoration: none;
 }
 
-.footer-section ul li:hover{
+.footer-section ul li a:hover{
   text-decoration: underline;
 }
 
